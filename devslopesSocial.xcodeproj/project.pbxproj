@@ -13,6 +13,7 @@
 		1905C9541EE7BAD400F6F202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1905C9531EE7BAD400F6F202 /* Assets.xcassets */; };
 		1905C9571EE7BAD400F6F202 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1905C9551EE7BAD400F6F202 /* LaunchScreen.storyboard */; };
 		1905C95F1EE7BC1C00F6F202 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1905C95E1EE7BC1C00F6F202 /* GoogleService-Info.plist */; };
+		195CD79F1EE7D7E400DB3231 /* GROM-SQUAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 195CD79E1EE7D7E400DB3231 /* GROM-SQUAD.png */; };
 		AFB13DD0B175A08120DA9E4C /* Pods_devslopesSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65829022827D2C31B0C40E55 /* Pods_devslopesSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		1905C9561EE7BAD400F6F202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1905C9581EE7BAD400F6F202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1905C95E1EE7BC1C00F6F202 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		195CD79E1EE7D7E400DB3231 /* GROM-SQUAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GROM-SQUAD.png"; sourceTree = "<group>"; };
 		65829022827D2C31B0C40E55 /* Pods_devslopesSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devslopesSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5743E394A0BF04E8B837F0C /* Pods-devslopesSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopesSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-devslopesSocial/Pods-devslopesSocial.release.xcconfig"; sourceTree = "<group>"; };
 		FD56597D5104575DAA945719 /* Pods-devslopesSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopesSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-devslopesSocial/Pods-devslopesSocial.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		1905C94B1EE7BAD400F6F202 /* devslopesSocial */ = {
 			isa = PBXGroup;
 			children = (
+				195CD79D1EE7D7C900DB3231 /* Resources */,
 				195CD79C1EE7C21800DB3231 /* Model */,
 				195CD79B1EE7C1E100DB3231 /* controller */,
 				195CD79A1EE7C1D900DB3231 /* View */,
@@ -96,6 +99,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		195CD79D1EE7D7C900DB3231 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				195CD79E1EE7D7E400DB3231 /* GROM-SQUAD.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		8FA9A229A6EF8A7756835AD2 /* Frameworks */ = {
@@ -182,6 +193,7 @@
 				1905C9541EE7BAD400F6F202 /* Assets.xcassets in Resources */,
 				1905C95F1EE7BC1C00F6F202 /* GoogleService-Info.plist in Resources */,
 				1905C9521EE7BAD400F6F202 /* Main.storyboard in Resources */,
+				195CD79F1EE7D7E400DB3231 /* GROM-SQUAD.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
