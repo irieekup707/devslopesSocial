@@ -19,6 +19,8 @@
 		195CD7A61EE7EE1600DB3231 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195CD7A51EE7EE1600DB3231 /* RoundButton.swift */; };
 		195CD7A81EE7F06900DB3231 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195CD7A71EE7F06900DB3231 /* CustomTextField.swift */; };
 		195CD7AA1EE7F29800DB3231 /* CustomSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195CD7A91EE7F29800DB3231 /* CustomSignInButton.swift */; };
+		195CD7AC1EE7F5CA00DB3231 /* CustomUITopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195CD7AB1EE7F5CA00DB3231 /* CustomUITopBar.swift */; };
+		195CD7AE1EE7F64200DB3231 /* CustomUIBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195CD7AD1EE7F64200DB3231 /* CustomUIBottomBar.swift */; };
 		AFB13DD0B175A08120DA9E4C /* Pods_devslopesSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65829022827D2C31B0C40E55 /* Pods_devslopesSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		195CD7A51EE7EE1600DB3231 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		195CD7A71EE7F06900DB3231 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		195CD7A91EE7F29800DB3231 /* CustomSignInButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSignInButton.swift; sourceTree = "<group>"; };
+		195CD7AB1EE7F5CA00DB3231 /* CustomUITopBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUITopBar.swift; sourceTree = "<group>"; };
+		195CD7AD1EE7F64200DB3231 /* CustomUIBottomBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIBottomBar.swift; sourceTree = "<group>"; };
 		65829022827D2C31B0C40E55 /* Pods_devslopesSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devslopesSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5743E394A0BF04E8B837F0C /* Pods-devslopesSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopesSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-devslopesSocial/Pods-devslopesSocial.release.xcconfig"; sourceTree = "<group>"; };
 		FD56597D5104575DAA945719 /* Pods-devslopesSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopesSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-devslopesSocial/Pods-devslopesSocial.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 				195CD79B1EE7C1E100DB3231 /* controller */,
 				195CD79A1EE7C1D900DB3231 /* View */,
 				1905C94C1EE7BAD400F6F202 /* AppDelegate.swift */,
+				1905C9501EE7BAD400F6F202 /* Main.storyboard */,
 				1905C9531EE7BAD400F6F202 /* Assets.xcassets */,
 				1905C9551EE7BAD400F6F202 /* LaunchScreen.storyboard */,
 				1905C9581EE7BAD400F6F202 /* Info.plist */,
@@ -92,11 +97,12 @@
 		195CD79A1EE7C1D900DB3231 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1905C9501EE7BAD400F6F202 /* Main.storyboard */,
 				195CD7A01EE7E9E700DB3231 /* CustomHeaderView.swift */,
 				195CD7A51EE7EE1600DB3231 /* RoundButton.swift */,
 				195CD7A71EE7F06900DB3231 /* CustomTextField.swift */,
 				195CD7A91EE7F29800DB3231 /* CustomSignInButton.swift */,
+				195CD7AB1EE7F5CA00DB3231 /* CustomUITopBar.swift */,
+				195CD7AD1EE7F64200DB3231 /* CustomUIBottomBar.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -275,6 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				195CD7AC1EE7F5CA00DB3231 /* CustomUITopBar.swift in Sources */,
+				195CD7AE1EE7F64200DB3231 /* CustomUIBottomBar.swift in Sources */,
 				195CD7AA1EE7F29800DB3231 /* CustomSignInButton.swift in Sources */,
 				1905C94F1EE7BAD400F6F202 /* SignInVC.swift in Sources */,
 				195CD7A61EE7EE1600DB3231 /* RoundButton.swift in Sources */,

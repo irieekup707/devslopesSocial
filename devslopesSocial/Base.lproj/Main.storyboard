@@ -25,29 +25,29 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ur-iE-Qbv" customClass="CustomHeaderView" customModule="devslopesSocial" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1oL-J2-Zbt" customClass="CustomUITopBar" customModule="devslopesSocial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.2026144415140152" green="0.45813211798667908" blue="0.49420377612113953" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GROM-SQUAD.png" translatesAutoresizingMaskIntoConstraints="NO" id="in5-ub-cKZ">
-                                        <rect key="frame" x="8" y="50" width="350" height="100"/>
+                                        <rect key="frame" x="8" y="42" width="350" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="HQ8-MM-fpJ"/>
                                             <constraint firstAttribute="width" constant="350" id="kaJ-lJ-PgH"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1oL-J2-Zbt">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.2026144415140152" green="0.45813211798667908" blue="0.49420377612113953" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490196078436" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="in5-ub-cKZ" secondAttribute="bottom" constant="25" id="Eev-sx-mC5"/>
-                                    <constraint firstItem="in5-ub-cKZ" firstAttribute="top" secondItem="5ur-iE-Qbv" secondAttribute="top" constant="50" id="FqW-9g-Vz0"/>
-                                    <constraint firstAttribute="trailing" secondItem="in5-ub-cKZ" secondAttribute="trailing" constant="8" id="J0b-ns-cFe"/>
+                                    <constraint firstAttribute="bottom" secondItem="in5-ub-cKZ" secondAttribute="bottom" constant="8" id="Eev-sx-mC5"/>
+                                    <constraint firstItem="in5-ub-cKZ" firstAttribute="top" secondItem="5ur-iE-Qbv" secondAttribute="top" constant="42" id="FqW-9g-Vz0"/>
+                                    <constraint firstAttribute="trailing" secondItem="in5-ub-cKZ" secondAttribute="trailing" constant="17" id="J0b-ns-cFe"/>
                                     <constraint firstAttribute="height" constant="150" id="PrZ-bc-lz1"/>
                                     <constraint firstItem="in5-ub-cKZ" firstAttribute="leading" secondItem="5ur-iE-Qbv" secondAttribute="leading" constant="8" id="UNw-4f-JEf"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdX-c2-rBx">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdX-c2-rBx" customClass="CustomUIBottomBar" customModule="devslopesSocial" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="592" width="375" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you do not have an account one will be automatically created for you when you sign in. or sign in with facebook." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iap-k5-qqp">
@@ -85,6 +85,9 @@
                                 <state key="normal" image="f">
                                     <color key="titleColor" red="0.20498155057430267" green="0.46959969401359558" blue="0.96479678153991699" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fy0-gI-kLW"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yCz-Ku-uTO">
                                 <rect key="frame" x="46" y="425" width="283" height="133"/>
@@ -93,13 +96,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="283" height="25"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31g-r9-A9j" customClass="CustomTextField" customModule="devslopesSocial" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="40" width="283" height="25"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2O-0e-yz4" customClass="CustomSignInButton" customModule="devslopesSocial" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="80" width="283" height="53"/>
@@ -108,6 +111,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bjt-s7-Lyn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -130,6 +136,10 @@
                             <constraint firstItem="yCz-Ku-uTO" firstAttribute="top" secondItem="PQr-sl-ilY" secondAttribute="bottom" constant="40" id="hw1-Ek-pYP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="Dvd-AC-5XH" id="4hX-8z-6sD"/>
+                        <outlet property="pwdField" destination="31g-r9-A9j" id="Lm7-uU-mSH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
