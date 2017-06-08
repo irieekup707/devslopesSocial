@@ -9,11 +9,7 @@
 import UIKit
 
 class CircleView: UIImageView {
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-
+    
     override func layoutSubviews() {
         
         layer.cornerRadius = self.frame.width / 2
