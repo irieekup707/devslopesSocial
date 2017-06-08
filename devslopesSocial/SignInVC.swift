@@ -71,8 +71,9 @@ class SignInVC: UIViewController {
                 print("Ryan: Succesfully Authenticated with Firebase")
                 
                 if let user = user {
+                    let userData = ["provider": credintial.provider]
                 
-                    self.completeSignIn(id: user.uid)
+                    self.completeSignIn(id: user.uid, userData: userData)
                 
                 }
             }
@@ -86,8 +87,9 @@ class SignInVC: UIViewController {
                 if error == nil {
                     print("Ryan: Email User Authenticated With Firebase")
                     if let user = user {
+                        let userData = ["provider": user.providerID]
                         
-                        self.completeSignIn(id: (user.uid))
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                 }else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
@@ -96,8 +98,9 @@ class SignInVC: UIViewController {
                         }else {
                             print("Ryan: Successfully Authenticated With Firebase")
                             if let user = user {
+                                let userData = ["provider": user.providerID]
                                 
-                                self.completeSignIn(id: (user.uid))
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                             
                         }
@@ -107,7 +110,9 @@ class SignInVC: UIViewController {
         }
         
     }
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+            DataService.ds.createFirbaseDBUser(uid: id, userData: userData)
+        
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         
         print("Ryan: Keychain Successfully Saved \(keychainResult)")
