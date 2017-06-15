@@ -10,14 +10,19 @@ import Foundation
 import Firebase
 
 let DB_BASE = Database.database().reference()
+let STORAGE_BASE = Storage.storage().reference()
 
 class DataService {
     
     static let ds = DataService()
-    
+
+    // DB references
     private var _REF_BASE = DB_BASE
     private var _REF_POST = DB_BASE.child("post")
     private var _REF_USERS = DB_BASE.child("users")
+    
+    // Storage references
+    private var _REF_POST_IMAGES = STORAGE_BASE.child("post-pics")
     
     
     var REF_BASE: DatabaseReference {
@@ -31,6 +36,11 @@ class DataService {
         return _REF_USERS
         
     }
+    
+    var REF_Post_Images: StorageReference {
+        return _REF_POST_IMAGES
+    }
+    
     func createFirbaseDBUser(uid:String, userData: Dictionary<String, String>) {
         REF_USERS.child(uid).updateChildValues(userData)
         
