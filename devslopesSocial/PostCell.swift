@@ -37,7 +37,7 @@ class PostCell: UITableViewCell {
                 if error != nil {
                     print("RYAN: UNABLE TO DOWNLOAD IMAGE FROM FIREBASE STORAGE")
                 }else {
-                    print("RYAN: IMAGE DOWNLOADED FROM FIREBASE STORAGW")
+                    print("RYAN: IMAGE DOWNLOADED FROM FIREBASE STORAGE")
                     if let imgData = data {
                         if let img = UIImage(data: imgData) {
                             self.postImg.image = img
