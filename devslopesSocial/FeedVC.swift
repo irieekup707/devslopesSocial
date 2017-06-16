@@ -31,18 +31,32 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker.delegate = self
         
         DataService.ds.REF_POST.observe(.value, with: { (snapshot) in
-            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
-                for snap in snapshot {
-                    print("SNAP: \(snap) ")
-                    if let postDict = snap.value as? Dictionary<String, Any> {
+//            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+//                for snap in snapshot {
+//                    print("SNAP: \(snap) ")
+//                    if let postDict = snap.value as? Dictionary<String, Any> {
+//                        let key = snap.key
+//                        let post = Post(postKey: key, postData: postDict)
+//                        self.posts.append(post)
+//                    }
+//                }
+//                
+//            }
+//            self.tableView.reloadData()
+//        })
+            
+            self.posts = [] // This is where you add it to fix the problem
+            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshots {
+                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
                         self.posts.append(post)
                     }
                 }
-                
             }
             self.tableView.reloadData()
+            
         })
         
     }
