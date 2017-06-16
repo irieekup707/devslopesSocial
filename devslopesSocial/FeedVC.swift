@@ -115,13 +115,32 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     print("RYAN: UNABLE TO UPLOAD IMAGE TO FIREBASE STORAGE")
                 }else {
                     print("RYAN: SUCCESFULLY UPLOADED IMAGE TO FIREBASE STORAGE")
-                     let downloadURL = metadata?.downloadURL()?.absoluteString
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                    
+                    if let url = downloadURL {
+                        self.postToFirebase(imgURL: url)
+                    }
+                    
+                    
                 }
             }
-            
-            
-            
         }
+    }
+    func postToFirebase(imgURL: String) {
+        let post: Dictionary<String, Any> = [
+        "caption": captionField.text!,
+        "imageURL": imgURL,
+        "likes": 0
+        ]
+        let firbasePost = DataService.ds.REF_POST.childByAutoId()
+        firbasePost.setValue(post)
+        
+        captionField.text = ""
+        imageSelected = false
+        imageAdd.image = UIImage(named: "add-image")
+        
+        tableView.reloadData()
+//        
     }
     
     
